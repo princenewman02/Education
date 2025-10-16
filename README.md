@@ -47,8 +47,9 @@ The work focuses on cleaning, processing, and preparing educational data for fur
  - The process begins with importing and exploring the two main datasets - EdGap_data.xlsx and ccd_sch_029_1617_w_1a_11212017.csv - to understand their structure, data types, and quality. 
  - Exploratory data analysis was then performed using pair plots to visually assess relationships between ACT scores and socioeconomic variables, providing early insights into potential correlations and data suitability. 
  - Next, the school information dataset was subsetted to retain only relevant columns, renamed for readability, and joined with the EdGap dataset using a left join to ensure all ACT data were preserved. Quality control steps followed, including removing invalid or out-of-range values, filtering for high schools, handling duplicates, identifying missing values and imputing them using regression-based techniques to ensure completeness. 
- - Finally, the cleaned dataset is exported as a CSV file for further statistical analysis or modeling. 
+ - Finally, the cleaned dataset is exported as a CSV file for further statistical analysis or modeling.
  - To reproduce the results, run the Jupyter notebooks in sequential order - starting from data loading and exploration, through cleaning and imputation, and ending with the export of the final dataset.
+ 
     ---
 
 ## Results
