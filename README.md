@@ -1,16 +1,18 @@
-# Project Title (This is a template README.md file that you can adapt to your project)
+# Educational Inequality Data Processing
 
-> A brief description of what the project does and its purpose.
+> An analysis of the relationship between U.S. high school performance on standardized exams (ACT/SAT) and socioeconomic factors.
 
 ---
 
 ## Project Overview
 
-Provide a short and concise overview of the project. Mention the problem it solves, the data used, and the key outcomes or findings.
+This project explores inequality of educational opportunity across U.S. high schools by analyzing whether socioeconomic variables are associated with school performance on standardized exams such as the ACT and SAT.
 
-- **Objective:** Clearly state the main goal of the project.
-- **Domain:** (e.g., Healthcare, Finance, E-commerce, etc.)
-- **Key Techniques:** (e.g., Regression, Classification, Clustering, NLP, Time Series)
+The work focuses on cleaning, processing, and preparing educational data for further analysis and modeling.
+
+- **Objective:** Examine how socioeconomic factors relate to ACT scores across schools in the United States..
+- **Domain:** Education / Social Data Analysis
+- **Key Techniques:** Data cleaning, exploratory data analysis (EDA), visualization, imputation, and data integration
 
 ---
 
@@ -29,26 +31,36 @@ Provide a short and concise overview of the project. Mention the problem it solv
 ## Data
 
 - **Source:** Link to the data source(s) 
-- **Description:** Brief overview of the dataset features, size, and format
+    - EdGap_data.xlsx - ACT scores and socioeconomic data
+    - ccd_sch_029_1617_w_1a_11212017.csv - school information dataset
+
+- **Description:** 
+    The datasets contain school-level ACT/SAT performance, demographics, and socioeconomic variables for U.S. high schools. Data was cleaned, joined, and prepared for regression and exploratory analysis. The output is a fully cleaned dataset ready for analysis. 
+
 - **License:** (if applicable)
 
 ---
 
 ## Analysis
 
-Describe the notebooks and/or scripts used to perform the analysis. Specify the order in which the code should be run to reproduce the results.
-
----
+ - The analysis was conducted using a single Jupyter notebook, Education.ipynb, which documents the complete data processing workflow from loading raw datasets to exporting the cleaned dataset. 
+ - The process begins with importing and exploring the two main datasets - EdGap_data.xlsx and ccd_sch_029_1617_w_1a_11212017.csv - to understand their structure, data types, and quality. 
+ - Exploratory data analysis was then performed using pair plots to visually assess relationships between ACT scores and socioeconomic variables, providing early insights into potential correlations and data suitability. 
+ - Next, the school information dataset was subsetted to retain only relevant columns, renamed for readability, and joined with the EdGap dataset using a left join to ensure all ACT data were preserved. Quality control steps followed, including removing invalid or out-of-range values, filtering for high schools, handling duplicates, identifying missing values and imputing them using regression-based techniques to ensure completeness. 
+ - Finally, the cleaned dataset is exported as a CSV file for further statistical analysis or modeling. 
+ - To reproduce the results, run the Jupyter notebooks in sequential order - starting from data loading and exploration, through cleaning and imputation, and ending with the export of the final dataset.
+    ---
 
 ## Results
-
-Include a short discussion of the findings and what they imply.
+    - Produced a cleaned, analysis-ready dataset linking ACT scores with socioeconomic indicators.
+    - Identified clear relationships suggesting socioeconomic disparities in school performance.
+    - Established a reproducible data-cleaning pipeline for educational data.
 
 ---
 
 ## Authors
 
-- Your Name - [@yourhandle](https://github.com/yourhandle)
+- (https://github.com/@princenewman02)
 
 ---
 
@@ -60,6 +72,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-- Tools/libraries used
-- Tutorials or papers referenced
-- Inspiration or collaborators
+ - Python libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
+ - Project guidance from Data 5100 Education project modules
+ - U.S. Department of Education datasets
